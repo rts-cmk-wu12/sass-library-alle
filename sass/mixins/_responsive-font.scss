@@ -1,0 +1,5 @@
+// Made by Mark
+
+@mixin responsive-font($min-size, $max-size, $min-width: 320px, $max-width: 1200px) {
+    font-size: calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}) / (#{$max-width} - #{$min-width})));
+}
