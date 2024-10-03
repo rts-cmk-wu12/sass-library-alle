@@ -1,0 +1,32 @@
+$message-color: blue;
+
+$heading-color: #5c5959;
+$heading-font-size: 2.5rem;
+$heading-font-weight: 700;
+$heading-line-height: 1.2;
+$heading-font-family: 'Roboto', sans-serif;
+$heading-font-family-2: 'montserrat', sans-serif;
+$heading-text-transform: uppercase;
+$heading-letter-spacing: 0.05em;
+$heading-text-shadow: 5px 15px 3px rgba(0, 0, 0, 0.1);
+
+.message {
+    color: $message-color;
+    font-family: $heading-font-family;
+}
+
+
+@mixin heading-styles {
+    font-family: $heading-font-family-2;
+    color: $heading-color;
+    font-size: $heading-font-size;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    text-transform: $heading-text-transform;
+    letter-spacing: $heading-letter-spacing;
+    text-shadow: $heading-text-shadow;
+}
+
+h1 {
+    @include heading-styles;
+}
