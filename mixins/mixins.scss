@@ -1,0 +1,53 @@
+//jackie 
+//color mixins
+.main {
+
+
+    &__red {
+        background-color: red;
+        color: white;
+    }
+
+    &__blue {
+        background-color: blue;
+        color: white;
+    }
+
+    &__green {
+        background-color: green;
+        color: white;
+    }
+
+    &__purple {
+        background-color: purple;
+        color: white;
+    }
+
+    &__orange {
+        background-color: orange;
+        color: white;
+    }
+
+    &__yellow {
+        background-color: yellow;
+        color: black;
+    }
+}
+//grid,flex mixins
+
+.flex, .grid {
+
+
+    &__grid {
+       display: grid;
+
+    }
+
+    &__flex {
+        display: flex;
+    
+    }
+
+
+
+}
