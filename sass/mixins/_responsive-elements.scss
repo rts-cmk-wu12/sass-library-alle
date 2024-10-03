@@ -1,0 +1,83 @@
+// Made by Mark
+
+@mixin responsive-font($min-size, $max-size, $min-width: 320px, $max-width: 1200px) {
+    font-size: calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}) / (#{$max-width} - #{$min-width})));
+}
+
+@mixin responsive-spacing($property, $small, $medium, $large) {
+    #{$property}: $small;
+
+    @media (min-width: 768px) {
+        #{$property}: $medium;
+    }
+
+    @media (min-width: 1200px) {
+        #{$property}: $large;
+    }
+}
+
+@mixin responsive-padding($small, $medium, $large) {
+    padding: $small;
+
+    @media (min-width: 768px) {
+        padding: $medium;
+    }
+
+    @media (min-width: 1200px) {
+        padding: $large;
+    }
+}
+
+@mixin responsive-margin($small, $medium, $large) {
+    margin: $small;
+
+    @media (min-width: 768px) {
+        margin: $medium;
+    }
+
+    @media (min-width: 1200px) {
+        margin: $large;
+    }
+}
+
+@mixin responsive-width($min-width, $max-width) {
+    width: $min-width;
+
+    @media (min-width: 768px) {
+        width: calc(#{$min-width} + (#{$max-width} - #{$min-width}) * ((100vw - 768px) / (1200 - 768)));
+    }
+
+    @media (min-width: 1200px) {
+        width: $max-width;
+    }
+}
+
+@mixin responsive-height($min-height, $max-height) {
+    height: $min-height;
+
+    @media (min-width: 768px) {
+        height: calc(#{$min-height} + (#{$max-height} - #{$min-height}) * ((100vw - 768px) / (1200 - 768)));
+    }
+
+    @media (min-width: 1200px) {
+        height: $max-height;
+    }
+}
+
+@mixin flex-display($direction: row, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin responsive-flex($direction: row, $wrap: nowrap) {
+    @include flex-display($direction, $wrap);
+
+    @media (max-width: 768px) {
+        @include flex-display(column, wrap);
+    }
+
+    @media (max-width: 480px) {
+        @include flex-display(column, nowrap);
+    }
+}

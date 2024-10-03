@@ -1,0 +1,50 @@
+/// Made by Magnus ///
+
+ /* - 🅼🅸🆇🅸🅽 - */
+ 
+
+
+// content flex mixin
+@mixin justify-content-align-content-flex($justify-content, $align-content) {
+    @if $justify-content and $align-content {
+        display: flex;
+        justify-content: $justify-content;
+        align-items: $align-content;
+    }
+}
+
+// items flex mixin
+@mixin justify-items-align-items-flex($justify-items, $align-items) {
+    @if $justify-items and $align-items {
+        display: flex;
+        justify-items: $justify-items;
+        align-items: $align-items;
+    }
+}
+
+
+//  content grid mixin
+@mixin justify-content-align-content-grid($justify-content, $align-content) {
+    @if $justify-content and $align-content {
+        display: grid;
+        justify-content: $justify-content;
+        align-items: $align-content;
+    }
+}
+
+// items grid mixin
+@mixin justify-items-align-items-grid($justify-items, $align-items) {
+    @if $justify-items and $align-items {
+        display: grid;
+        justify-items: $justify-items;
+        align-items: $align-items;
+    }
+}
+
+
+//  Media queries mixin
+@mixin mediaqueries($min-width, $max-width) {
+    @media only screen and (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}

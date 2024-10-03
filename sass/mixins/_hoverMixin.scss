@@ -1,0 +1,13 @@
+//BENJAMIN JASEK SMITH
+
+//HOVER MIXIN, bruges til hurtigt at adde en hovereffet, indstast transition, scale og background color
+
+@include mixins.addHover(0.4s,0.9, grey);//eksempel
+
+@mixin addHover($transition: 0.4s, $scale: 1.2, $backgroundColorChange: none){
+    transition: $transition;
+    &:hover{
+        background-color: $backgroundColorChange;
+        scale: (#{$scale});
+    }
+}
