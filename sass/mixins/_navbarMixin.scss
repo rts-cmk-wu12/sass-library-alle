@@ -1,0 +1,10 @@
+
+
+//BENJAMIN JASEK SMITH
+//NAVBAR MIXIN bruges til hurtigt at sætte en navbar op, angiv width og type of display f.ek.s "flex"m og derefter et gap
+@mixin navBar($width,$display, $gap){
+    width: $width;
+    display: $display;
+    gap: $gap;
+}
+@include mixins.navBar(600px, flex, 1rem);//eksempel
