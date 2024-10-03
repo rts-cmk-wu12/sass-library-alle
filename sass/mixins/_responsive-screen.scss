@@ -1,0 +1,17 @@
+@mixin responsive-wrapper-small-screen($max-width: 30rem) {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin responsive-wrapper-large-screen($min-width: 80rem) {
+    min-width: $min-width;
+    margin: 0 auto;
+}
+
+// common breakpoints:
+// small mobile:        max-width: 30rem
+// tablet/large mobile: max-width: 48rem
+// laptop:              max-width: 80rem
+// desktop:             min-width: 80rem
+
+// Emma LL
