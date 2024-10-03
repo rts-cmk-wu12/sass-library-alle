@@ -1,0 +1,12 @@
+//Oscar
+@mixin stjerneregel{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+@mixin imgregel{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
