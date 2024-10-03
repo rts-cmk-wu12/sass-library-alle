@@ -1,0 +1,41 @@
+/*------Andreas------*/
+
+$gap: 15;
+
+@function setColumns($columns, $base-gap: $gap) {
+  // Calculate the total gap between columns
+  $dynamic-gap: $base-gap * ($columns - 1);
+
+  @return calc((100% - #{$dynamic-gap}px) / #{$columns});
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: calc(#{$gap} * 1px);
+}
+
+.box {
+  height: 100px;
+  background: blueviolet;
+  flex-basis: 100%;
+}
+
+@media(min-width: 400px) {
+  .box {
+    flex-basis: setColumns($columns: 2);
+  }
+}
+
+@media(min-width: 768px) {
+  .box {
+    flex-basis: setColumns($columns: 3);
+  }
+}
+
+@media(min-width: 992px) {
+  .box {
+    flex-basis: setColumns($columns: 4);
+  }
+}
